@@ -10,8 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Main {
-    private final static UserService userService = new UserServiceImpl();
+
     public static void main(String[] args) {
+         UserService userService = new UserServiceImpl();
         // реализуйте алгоритм здесь
             userService.createUsersTable();
             userService.saveUser("Will", "Smith", (byte) 54);
@@ -20,6 +21,7 @@ public class Main {
             userService.saveUser("James", "Din", (byte) 24);
             System.out.println(userService.getAllUsers());
             userService.cleanUsersTable();
+
             userService.dropUsersTable();
 
     }
